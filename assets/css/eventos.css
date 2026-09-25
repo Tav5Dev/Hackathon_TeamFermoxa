@@ -1,0 +1,62 @@
+.eventos__filtro { margin-bottom: 20px; }
+.eventos__filtro .chip { text-decoration: none; }
+
+.eventos__mes {
+    margin: 32px 0 12px;
+    font-size: 1.3rem;
+    color: var(--verde-oscuro);
+    border-bottom: 2px solid var(--verde-claro);
+    padding-bottom: 6px;
+}
+.eventos__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+    gap: 16px;
+}
+
+.evento {
+    display: flex;
+    gap: 16px;
+    background: var(--blanco);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    padding: 16px;
+}
+.evento__fecha {
+    flex: 0 0 68px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--degradado-festivo);
+    color: var(--blanco);
+    box-shadow: 0 4px 12px rgba(71, 30, 151, .25);
+    line-height: 1.1;
+}
+.evento__dia { font-size: 1.8rem; font-weight: 700; }
+.evento__mes { font-size: .9rem; text-transform: uppercase; letter-spacing: .05em; }
+.evento__cuerpo { flex: 1; min-width: 0; }
+.evento__tipo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--violeta);
+}
+.evento__nombre { margin: 2px 0 0; font-size: 1.2rem; }
+.evento__descripcion { margin: 8px 0; }
+.evento__etiquetas { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.evento__etiquetas:empty { display: none; }
+.evento__links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.evento__links a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+
+@media (max-width: 600px) {
+    .eventos__lista { grid-template-columns: 1fr; }
+    .evento { padding: 14px; gap: 12px; }
+    .evento__fecha { flex-basis: 56px; height: 64px; }
+    .evento__dia { font-size: 1.5rem; }
+}

@@ -1,0 +1,129 @@
+.volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ficha {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 32px;
+    align-items: start;
+}
+.ficha__principal h2 { display: flex; align-items: center; gap: 8px; margin-top: 36px; font-size: 1.35rem; }
+.ficha__principal h2 .icono { color: var(--verde); }
+.ficha__titulo { margin: 16px 0 6px; font-size: clamp(1.5rem, 4vw, 2.1rem); }
+.ficha__meta { display: flex; flex-wrap: wrap; gap: 4px 16px; color: var(--texto-suave); margin: 0 0 16px; }
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+    border-radius: var(--radio);
+    overflow: hidden;
+}
+.galeria img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.galeria__vacia {
+    aspect-ratio: 16 / 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde);
+    background: linear-gradient(135deg, var(--verde-claro), var(--azul-claro));
+}
+.galeria__respaldo { position: relative; grid-column: 1 / -1; }
+.galeria__respaldo img { aspect-ratio: 16 / 7; }
+.galeria__vacia .icono { width: 5rem; height: 5rem; stroke-width: 1.5; }
+
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+}
+.caracteristicas li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blanco);
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.mapa--chico { height: 300px; margin-bottom: 12px; }
+
+.cercanos { list-style: none; padding: 0; margin: 0; }
+.cercanos li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--borde);
+}
+.caracteristicas .icono { color: var(--verde); }
+.cercanos__icono {
+    flex: 0 0 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    color: var(--verde-oscuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cercanos__nombre { flex: 1; }
+.cercanos__nombre small { display: block; color: var(--texto-suave); }
+.cercanos__km { color: var(--verde-oscuro); font-weight: 600; font-size: .9rem; white-space: nowrap; }
+
+.resena {
+    background: var(--blanco);
+    padding: 14px 16px;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    margin-bottom: 10px;
+}
+.resena p { margin: 6px 0; }
+.resena small { color: var(--verde); }
+.resena__cabecera { display: flex; justify-content: space-between; gap: 8px; }
+.estrellas { color: var(--estrella); }
+
+.ficha__lateral { display: flex; flex-direction: column; gap: 16px; }
+.caja__precio { font-size: 1.8rem; font-weight: 700; color: var(--verde-oscuro); margin: 0; }
+.caja__precio small { font-size: .9rem; font-weight: 400; color: var(--texto-suave); }
+.caja__total { margin: 8px 0 16px; }
+.caja__btn { width: 100%; }
+.caja__btn--extra { margin-top: 8px; }
+.caja__aviso { display: flex; gap: 6px; font-size: .9rem; color: var(--texto-suave); margin: 12px 0 0; }
+.caja__aviso .icono { color: var(--azul); margin-top: 2px; }
+.resena small { display: inline-flex; }
+
+.prestador__nombre { font-weight: 600; font-size: 1.1rem; margin: 0 0 6px; }
+.verificaciones { list-style: none; padding: 0; margin: 12px 0; }
+.verificaciones li { display: flex; align-items: center; gap: 8px; padding: 3px 0; }
+.verificaciones .hecho { color: var(--verde); }
+.verificaciones .pendiente { color: var(--texto-suave); }
+.verificaciones .pendiente .icono { opacity: .35; }
+
+.antes-de-ir__lista { list-style: none; padding: 0; margin: 8px 0 12px; }
+.antes-de-ir__lista li { padding: 8px 0; border-bottom: 1px solid var(--borde); }
+.antes-de-ir__lista small { display: block; color: var(--texto-suave); margin-top: 4px; }
+.antes-de-ir > a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
+
+.nota-idioma { font-size: .9rem; }
+
+.consulta-form__intro { margin: 0 0 16px; }
+#consultar { scroll-margin-top: 90px; }
+
+.reportar { margin-top: 40px; font-size: .92rem; }
+.reportar summary { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; color: var(--texto-suave); }
+.reportar summary:hover { color: var(--rojo); }
+.reportar form { margin-top: 12px; max-width: 520px; }
+
+@media (max-width: 860px) {
+    .ficha { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,82 @@
+.indice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.indice a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    text-decoration: none;
+    font-weight: 600;
+}
+.indice a:hover { background: var(--verde-claro); }
+
+.info__titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 40px 0 12px;
+    font-size: 1.45rem;
+    scroll-margin-top: 90px;
+}
+.info__titulo .icono { color: var(--verde); }
+
+.info__temporadas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+.info__temporadas .caja h3 { font-size: 1.1rem; }
+.info__temporadas .caja p { margin: 0; }
+
+.info__destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(360px, 100%), 1fr));
+    gap: 16px;
+}
+.info-destino { scroll-margin-top: 90px; display: flex; flex-direction: column; }
+.info-destino:target { outline: 3px solid var(--azul); }
+.info-destino dl { margin: 8px 0 16px; flex: 1; }
+.info-destino dt {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+.info-destino dt .icono { color: var(--verde); }
+.info-destino dd { margin: 4px 0 0 28px; }
+.info-destino dd .badge { margin-bottom: 2px; }
+.info-destino__links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.info__lista { list-style: none; margin: 0; padding: 12px 20px; }
+.info__lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--borde);
+}
+.info__lista li:last-child { border-bottom: 0; }
+.info__lista .icono { color: var(--verde); margin-top: 3px; }
+
+.info__telefonos { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
+.telefono {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    border-radius: var(--radio);
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 600;
+}
+.telefono__numero { font-size: 1.6rem; font-weight: 700; color: var(--rojo); }
